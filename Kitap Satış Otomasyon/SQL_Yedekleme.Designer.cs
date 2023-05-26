@@ -98,6 +98,7 @@
             this.Btn_Yedekle.Size = new System.Drawing.Size(97, 28);
             this.Btn_Yedekle.TabIndex = 11;
             this.Btn_Yedekle.Text = "Yedekle";
+            this.Btn_Yedekle.Click += new System.EventHandler(this.Btn_Yedekle_Click_1);
             // 
             // Btn_Sec
             // 
@@ -106,6 +107,7 @@
             this.Btn_Sec.Size = new System.Drawing.Size(22, 22);
             this.Btn_Sec.TabIndex = 10;
             this.Btn_Sec.Text = "...";
+            this.Btn_Sec.Click += new System.EventHandler(this.Btn_Sec_Click_1);
             // 
             // Txt_Adres
             // 

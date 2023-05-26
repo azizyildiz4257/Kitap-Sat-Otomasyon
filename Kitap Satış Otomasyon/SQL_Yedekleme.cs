@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Microsoft.SqlServer.Management.Common;
-//using Microsoft.SqlServer.Management.Smo;
+using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
 
 namespace Kitap_Satış_Otomasyon
 {
@@ -21,6 +21,11 @@ namespace Kitap_Satış_Otomasyon
 
         private void Btn_Sec_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Btn_Sec_Click_1(object sender, EventArgs e)
+        {
             xtraSaveFileDialog1.Title = "Yedeklenecek yolu seçiniz.";
             xtraSaveFileDialog1.Filter = "Yedekleme Dosyaları(*.bak)|*.bak|Tüm Dosyalar(*.*)|*.*";
             if (xtraSaveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -29,28 +34,33 @@ namespace Kitap_Satış_Otomasyon
             }
         }
 
-        //private void Btn_Yedekle_Click(object sender, EventArgs e)
-        //{
-        //    Server dbServer = new Server(new ServerConnection(Txt_Sunucu.Text));
-        //    Backup dbBackup = new Backup();
-        //    dbBackup.Action = BackupActionType.Database;
-        //    dbBackup.Database = Txt_Veritabanı.Text;
-        //    dbBackup.Devices.AddDevice(Txt_Adres.Text, DeviceType.File);
-        //    dbBackup.Initialize = false;
-        //    dbBackup.Complete += DbBackup_Complete;
-        //    dbBackup.SqlBackup(dbServer);
-        //}
+        private void Btn_Yedekle_Click(object sender, EventArgs e)
+        {
 
-        //private void DbBackup_Complete(object sender, ServerMessageEventArgs e)
-        //{
-        //    try
-        //    {
-        //        MessageBox.Show("Yedekleme işlemi tamamlandı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+        }
+
+        private void DbBackup_Complete(object sender, ServerMessageEventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Yedekleme işlemi tamamlandı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Btn_Yedekle_Click_1(object sender, EventArgs e)
+        {
+            Server dbServer = new Server(new ServerConnection(Txt_Sunucu.Text));
+            Backup dbBackup = new Backup();
+            dbBackup.Action = BackupActionType.Database;
+            dbBackup.Database = Txt_Veritabanı.Text;
+            dbBackup.Devices.AddDevice(Txt_Adres.Text, DeviceType.File);
+            dbBackup.Initialize = false;
+            dbBackup.Complete += DbBackup_Complete;
+            dbBackup.SqlBackup(dbServer);
+        }
     }
 }
