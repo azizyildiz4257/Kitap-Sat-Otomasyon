@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -37,7 +36,7 @@
             this.Btn_Sec = new DevExpress.XtraEditors.SimpleButton();
             this.Txt_Adres = new DevExpress.XtraEditors.TextEdit();
             this.Txt_Veritabanı = new DevExpress.XtraEditors.TextEdit();
-            this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Sunucu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Adres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Veritabanı.Properties)).BeginInit();
@@ -128,10 +127,6 @@
             this.Txt_Veritabanı.Size = new System.Drawing.Size(213, 22);
             this.Txt_Veritabanı.TabIndex = 8;
             // 
-            // xtraSaveFileDialog1
-            // 
-            this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
-            // 
             // SQL_Yedekleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +162,6 @@
         private DevExpress.XtraEditors.SimpleButton Btn_Sec;
         private DevExpress.XtraEditors.TextEdit Txt_Adres;
         private DevExpress.XtraEditors.TextEdit Txt_Veritabanı;
-        private DevExpress.XtraEditors.XtraSaveFileDialog xtraSaveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

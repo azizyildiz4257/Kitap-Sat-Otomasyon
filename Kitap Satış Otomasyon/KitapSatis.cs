@@ -62,6 +62,7 @@ namespace Kitap_Satış_Otomasyon
             TxtStok.Text = DGVKitapSatis.CurrentRow.Cells["StokSayısı"].Value.ToString();
             TxtAlisFiyat.Text = DGVKitapSatis.CurrentRow.Cells["AlısFiyatı"].Value.ToString();
 
+            Txt_SatisMiktari.Text = "1";
             TxtSatış.Focus();
 
             ds1.Clear();

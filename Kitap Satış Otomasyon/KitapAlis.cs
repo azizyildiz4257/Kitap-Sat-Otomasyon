@@ -123,39 +123,47 @@ namespace Kitap_Satış_Otomasyon
                 else
                 {
 
-                    SqlCommand komut = new SqlCommand("insert into Tbl_KitapAlis (KitapBarkodu,KitapAdı,Yazarı,CiltNo,StokSayısı,AlısFiyatı,KayıtTarihi) values (@KitapBarkodu,@KitapAdı,@Yazarı,@CiltNo,@StokSayısı,@AlısFiyatı,@KayıtTarihi)", bgl.baglan());
-                    komut.Parameters.AddWithValue("@KitapBarkodu", TxtKitapBarkod.Text);
-                    komut.Parameters.AddWithValue("@KitapAdı", TxtKitapAdı.Text);
-                    komut.Parameters.AddWithValue("@Yazarı", TxtYazarı.Text);
-                    komut.Parameters.AddWithValue("@CiltNo", TxtCiltNo.Text);
-                    komut.Parameters.AddWithValue("@StokSayısı", TxtStok.Text);
-                    komut.Parameters.AddWithValue("@AlısFiyatı", TxtAlisFiyat.Text);
-                    komut.Parameters.AddWithValue("@KayıtTarihi", DateTime.Now.ToShortDateString());
-                    komut.ExecuteNonQuery();
-                    MessageBox.Show("Kaydınız Tamamlandı.");
-                    ds.Clear();
-                    KitapListesi();
-
-                    /**************************************Alınmıs Kitaplar************************************/
-
-                    SqlCommand komut2 = new SqlCommand("insert into Tbl_AlinmisKitaplar (KitapBarkodu,KitapAdı,Yazarı,CiltNo,StokSayısı,AlısFiyatı,KayıtTarihi) values (@KitapBarkodu,@KitapAdı,@Yazarı,@CiltNo,@StokSayısı,@AlısFiyatı,@KayıtTarihi)", bgl.baglan());
-                    komut2.Parameters.AddWithValue("@KitapBarkodu", TxtKitapBarkod.Text);
-                    komut2.Parameters.AddWithValue("@KitapAdı", TxtKitapAdı.Text);
-                    komut2.Parameters.AddWithValue("@Yazarı", TxtYazarı.Text);
-                    komut2.Parameters.AddWithValue("@CiltNo", TxtCiltNo.Text);
-                    komut2.Parameters.AddWithValue("@StokSayısı", TxtStok.Text);
-                    komut2.Parameters.AddWithValue("@AlısFiyatı", TxtAlisFiyat.Text);
-                    komut2.Parameters.AddWithValue("@KayıtTarihi", DateTime.Now.ToShortDateString());
-                    komut2.ExecuteNonQuery();
-
-                    foreach (Control item in Controls)
+                    try
                     {
-                        if (item is TextBox)
+                        SqlCommand komut = new SqlCommand("insert into Tbl_KitapAlis (KitapBarkodu,KitapAdı,Yazarı,CiltNo,StokSayısı,AlısFiyatı,KayıtTarihi) values (@KitapBarkodu,@KitapAdı,@Yazarı,@CiltNo,@StokSayısı,@AlısFiyatı,@KayıtTarihi)", bgl.baglan());
+                        komut.Parameters.AddWithValue("@KitapBarkodu", TxtKitapBarkod.Text);
+                        komut.Parameters.AddWithValue("@KitapAdı", TxtKitapAdı.Text);
+                        komut.Parameters.AddWithValue("@Yazarı", TxtYazarı.Text);
+                        komut.Parameters.AddWithValue("@CiltNo", TxtCiltNo.Text);
+                        komut.Parameters.AddWithValue("@StokSayısı", TxtStok.Text);
+                        komut.Parameters.AddWithValue("@AlısFiyatı", TxtAlisFiyat.Text);
+                        komut.Parameters.AddWithValue("@KayıtTarihi", DateTime.Now.ToShortDateString());
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Kaydınız Tamamlandı.");
+                        ds.Clear();
+                        KitapListesi();
+
+                        /**************************************Alınmıs Kitaplar************************************/
+
+                        SqlCommand komut2 = new SqlCommand("insert into Tbl_AlinmisKitaplar (KitapBarkodu,KitapAdı,Yazarı,CiltNo,StokSayısı,AlısFiyatı,KayıtTarihi) values (@KitapBarkodu,@KitapAdı,@Yazarı,@CiltNo,@StokSayısı,@AlısFiyatı,@KayıtTarihi)", bgl.baglan());
+                        komut2.Parameters.AddWithValue("@KitapBarkodu", TxtKitapBarkod.Text);
+                        komut2.Parameters.AddWithValue("@KitapAdı", TxtKitapAdı.Text);
+                        komut2.Parameters.AddWithValue("@Yazarı", TxtYazarı.Text);
+                        komut2.Parameters.AddWithValue("@CiltNo", TxtCiltNo.Text);
+                        komut2.Parameters.AddWithValue("@StokSayısı", TxtStok.Text);
+                        komut2.Parameters.AddWithValue("@AlısFiyatı", TxtAlisFiyat.Text);
+                        komut2.Parameters.AddWithValue("@KayıtTarihi", DateTime.Now.ToShortDateString());
+                        komut2.ExecuteNonQuery();
+
+                        foreach (Control item in Controls)
                         {
-                            item.Text = "";
+                            if (item is TextBox)
+                            {
+                                item.Text = "";
+                            }
                         }
+                        TxtKitapBarkod.Focus();
                     }
-                    TxtKitapBarkod.Focus();
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Lütfen '.' nokta simgesi ile giriş yapınız.");
+                    }
                 }
             }
         }
@@ -169,7 +177,7 @@ namespace Kitap_Satış_Otomasyon
             else
             {
                 DialogResult dialog = new DialogResult();
-                dialog = MessageBox.Show("Bu kaydı silmek isyormusun.", "Kaydı Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                dialog = MessageBox.Show("Bu kaydı silmek istiyor musun?", "Kaydı Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialog == DialogResult.Yes)
                 {
                     SqlCommand komut = new SqlCommand("Delete From Tbl_KitapAlis where KitapBarkodu='" + barkod + "'", bgl.baglan());

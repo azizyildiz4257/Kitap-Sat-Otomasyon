@@ -38,6 +38,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Txt_SatisNo = new System.Windows.Forms.TextBox();
             this.DGVKitapSatis = new System.Windows.Forms.DataGridView();
             this.Btnİptal = new System.Windows.Forms.Button();
             this.BtnSatış = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.DGVGizli = new System.Windows.Forms.DataGridView();
             this.Txt_SatisMiktari = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.Txt_SatisNo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVKitapSatis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGizli)).BeginInit();
@@ -165,6 +165,16 @@
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitaplarda Ara";
+            // 
+            // Txt_SatisNo
+            // 
+            this.Txt_SatisNo.Enabled = false;
+            this.Txt_SatisNo.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Txt_SatisNo.Location = new System.Drawing.Point(48, -1);
+            this.Txt_SatisNo.Name = "Txt_SatisNo";
+            this.Txt_SatisNo.Size = new System.Drawing.Size(134, 22);
+            this.Txt_SatisNo.TabIndex = 77;
+            this.Txt_SatisNo.Visible = false;
             // 
             // DGVKitapSatis
             // 
@@ -376,6 +386,7 @@
             this.DGVGizli.Name = "DGVGizli";
             this.DGVGizli.Size = new System.Drawing.Size(845, 198);
             this.DGVGizli.TabIndex = 74;
+            this.DGVGizli.Visible = false;
             // 
             // Txt_SatisMiktari
             // 
@@ -384,7 +395,6 @@
             this.Txt_SatisMiktari.Name = "Txt_SatisMiktari";
             this.Txt_SatisMiktari.Size = new System.Drawing.Size(134, 22);
             this.Txt_SatisMiktari.TabIndex = 1;
-            this.Txt_SatisMiktari.Text = "1";
             // 
             // label12
             // 
@@ -396,15 +406,6 @@
             this.label12.Size = new System.Drawing.Size(96, 19);
             this.label12.TabIndex = 76;
             this.label12.Text = "Satış Miktarı";
-            // 
-            // Txt_SatisNo
-            // 
-            this.Txt_SatisNo.Enabled = false;
-            this.Txt_SatisNo.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Txt_SatisNo.Location = new System.Drawing.Point(48, -1);
-            this.Txt_SatisNo.Name = "Txt_SatisNo";
-            this.Txt_SatisNo.Size = new System.Drawing.Size(134, 22);
-            this.Txt_SatisNo.TabIndex = 77;
             // 
             // KitapSatis
             // 

@@ -44,8 +44,7 @@
             this.BtnKitapAlıs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnKitapAlıs.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKitapAlıs.ForeColor = System.Drawing.Color.White;
-            this.BtnKitapAlıs.Image = ((System.Drawing.Image)(resources.GetObject("BtnKitapAlıs.Image")));
-            this.BtnKitapAlıs.Location = new System.Drawing.Point(17, 74);
+            this.BtnKitapAlıs.Location = new System.Drawing.Point(24, 113);
             this.BtnKitapAlıs.Name = "BtnKitapAlıs";
             this.BtnKitapAlıs.Size = new System.Drawing.Size(135, 46);
             this.BtnKitapAlıs.TabIndex = 4;
@@ -59,8 +58,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(17, 132);
+            this.button1.Location = new System.Drawing.Point(24, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 46);
             this.button1.TabIndex = 5;
@@ -75,8 +73,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(674, 153);
+            this.button2.Location = new System.Drawing.Point(856, 229);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 46);
             this.button2.TabIndex = 6;
@@ -91,10 +88,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(377, 272);
+            this.button3.Location = new System.Drawing.Point(473, 396);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 28);
+            this.button3.Size = new System.Drawing.Size(85, 35);
             this.button3.TabIndex = 7;
             this.button3.Text = "Kasa";
             this.button3.UseVisualStyleBackColor = false;
@@ -107,8 +103,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(674, 91);
+            this.button4.Location = new System.Drawing.Point(856, 141);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 46);
             this.button4.TabIndex = 8;
@@ -124,8 +119,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(674, 401);
+            this.button5.Location = new System.Drawing.Point(864, 592);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 46);
             this.button5.TabIndex = 9;
@@ -139,7 +133,7 @@
             this.Btn_Yedekle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Yedekle.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Btn_Yedekle.ForeColor = System.Drawing.Color.White;
-            this.Btn_Yedekle.Location = new System.Drawing.Point(17, 387);
+            this.Btn_Yedekle.Location = new System.Drawing.Point(12, 592);
             this.Btn_Yedekle.Name = "Btn_Yedekle";
             this.Btn_Yedekle.Size = new System.Drawing.Size(135, 46);
             this.Btn_Yedekle.TabIndex = 10;
@@ -156,7 +150,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button5;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 650);
             this.Controls.Add(this.Btn_Yedekle);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

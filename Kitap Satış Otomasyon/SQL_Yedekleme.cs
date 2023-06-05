@@ -26,11 +26,11 @@ namespace Kitap_Satış_Otomasyon
 
         private void Btn_Sec_Click_1(object sender, EventArgs e)
         {
-            xtraSaveFileDialog1.Title = "Yedeklenecek yolu seçiniz.";
-            xtraSaveFileDialog1.Filter = "Yedekleme Dosyaları(*.bak)|*.bak|Tüm Dosyalar(*.*)|*.*";
-            if (xtraSaveFileDialog1.ShowDialog() == DialogResult.OK)
+            saveFileDialog1.Title = "Yedeklenecek yolu seçiniz.";
+            saveFileDialog1.Filter = "Yedekleme Dosyaları(*.bak)|*.bak|Tüm Dosyalar(*.*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Txt_Adres.Text = xtraSaveFileDialog1.FileName;
+                Txt_Adres.Text = saveFileDialog1.FileName;
             }
         }
 
